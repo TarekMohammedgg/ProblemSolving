@@ -1,11 +1,21 @@
-#include<iostream>
-#include<ctype.h>
-#include<set>
-using namespace std ;
-int main() {
-int number ;
-cin>> number ;
-cout << "Your Number Is : " << number << endl ;
-cout << "Thank You!"<< endl ;
+#include <iostream>
+#include<cmath>
+using namespace std;
 
-return 0; }
+int main() {
+	 int n;
+	 cin>>n;
+	 int capacity=0;
+	 int stillnow=0;
+	 for(int i=0;i<n;i++){
+		 int a,b;
+		 cin>>a>>b;
+		 stillnow-=a;
+		 stillnow+=b;
+		 capacity=max(capacity,stillnow);
+
+	 }
+	 cout<<capacity;
+
+	return 0;
+}
